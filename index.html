@@ -622,7 +622,7 @@ const NEW_STOPS = [
 const ORDER = [
  ["tokio","01","Dag 1–6",6],["nikko","02","Dag 7–8",2],["yudanaka","03","Dag 9–10",2],["kanazawa","04","Dag 11–12",2],
  ["ainokura","05","Dag 13",1],["kyoto","06","Dag 14–17",4],["osaka","07","Dag 18–19",2],["beppu","08","Dag 21–22",2],
- ["kurokawa","09","Dag 23–24",2],["kagoshima","10","Dag 25–26",2],["fukuoka","11","Dag 27–28",2]
+ ["kagoshima","09","Dag 23–24",2],["nagasaki","10","Dag 25–26",2],["fukuoka","11","Dag 27–28",2]
 ];
 (function(){
   const pool = STOPS.concat(NEW_STOPS);
@@ -850,7 +850,7 @@ const TIX = {
 
 const ROUTE_A = ["Tokyo Station","Yumoto Onsen Nikko","Yudanaka Station","Kenrokuen Kanazawa","Ainokura Gokayama","Fushimi Inari Taisha Kyoto","Osaka Nanko Ferry Terminal"];
 const ROUTE_B = ["Shin-Osaka Station","Hiroshima Peace Memorial Park","Miyajimaguchi Station","Itsukushima Shrine"];
-const ROUTE_C = ["Beppu Station","Kurokawa Onsen","Kagoshima-Chuo Station","Hakata Station Fukuoka"];
+const ROUTE_C = ["Beppu Station","Kagoshima-Chuo Station","Nagasaki Station","Hakata Station Fukuoka"];
 const ROUTE_HONSHU =["Asakusa Station Tokyo","Tobu-Nikko Station","Yumoto Onsen Nikko","Nagano Station","Yudanaka Station","Kanazawa Station","Kyoto Station","Osaka Namba Station"];
 const ROUTE_KYUSHU = ["Beppu Station","Yufuin Station","Kurokawa Onsen","Aso Station","Kumamoto Station","Kirishima-Jingu Station","Kagoshima-Chuo Station","Hakata Station"];
 
@@ -967,7 +967,7 @@ function viewHome(){
   return `<div class="view">
     <div class="eyebrow">Tokio → Fukuoka · zonder binnenlandse vluchten</div>
     <h1>Van sneeuw naar zon</h1>
-    <p class="lead">Ca. ${total} nachten van sneeuw naar zon, met trein, bus en één nachtboot. Een week Tokio, dan sneeuwschoenen en zwavelbaden in Oku-Nikko, de sneeuwapen en badhuisjes van Shibu, Kanazawa en een nacht in een boerderij met rieten dak in Gokayama. Daarna klassiek Japan in Kyoto, Nara en Osaka (met een dagtrip naar Hiroshima), de nachtboot naar Beppu, en een warme vulkaanronde over Kyushu via Kurokawa en Kagoshima naar Fukuoka. Op dag 29 vlieg je naar Hongkong.</p>
+    <p class="lead">Ca. ${total} nachten van sneeuw naar zon, met trein, bus en één nachtboot. Een week Tokio, dan sneeuwschoenen en zwavelbaden in Oku-Nikko, de sneeuwapen en badhuisjes van Shibu, Kanazawa en een nacht in een boerderij met rieten dak in Gokayama. Daarna klassiek Japan in Kyoto, Nara en Osaka (met een dagtrip naar Hiroshima), de nachtboot naar Beppu (met een dagtrip naar Kurokawa), en een warme ronde over Kyushu via Kagoshima en Nagasaki naar Fukuoka. Op dag 29 vlieg je naar Hongkong.</p>
     <div class="pano">${panorama()}</div>
     <div class="stats">
       <div><b>${STOPS.length}</b><span>stops</span></div>
@@ -986,11 +986,11 @@ function viewHome(){
         ${ext(R(ROUTE_B),"Dagtrip Hiroshima & Miyajima").replace("<a ","<a class=\"btn\" ")}
         ${ext(R(ROUTE_C),"Deel 2: Beppu → Fukuoka").replace("<a ","<a class=\"btn\" ")}
       </div>
-      <p class="small muted" style="margin:10px 0 0">Deel 1: Oku-Nikko, Yudanaka, Kanazawa, Gokayama, Kyoto en de veerterminal in Osaka. Deel 2: Beppu, Kurokawa, Kagoshima en Fukuoka.</p>
+      <p class="small muted" style="margin:10px 0 0">Deel 1: Oku-Nikko, Yudanaka, Kanazawa, Gokayama, Kyoto en de veerterminal in Osaka. Deel 2: Beppu, Kagoshima, Nagasaki en Fukuoka.</p>
     </div>
-    <div class="note"><b>Korter, ca. 3 weken (21 nachten)</b>Tokio 4, Oku-Nikko 2, Yudanaka 2, Kanazawa 1, Gokayama 1, Kyoto 3, Osaka 1, nachtboot 1, Beppu 2, Kurokawa 1, Fukuoka 3. Dan sla je Kagoshima en de dagtrip naar Hiroshima over.</div>
-    <div class="note"><b>Eerst boeken</b>Je reist flexibel en boekt de meeste hotels (ca. €50–100 per nacht) een paar dagen vooraf. Uitzonderingen, een paar weken vooraf: de ryokans in Yumoto (Oku-Nikko), Yudanaka en Kurokawa, de minshuku in Gokayama (weekenden raken het eerst vol), de Kyushu Odan-bus en de vlucht van Fukuoka naar Hongkong. De nachtboot kun je tot op de dag zelf boeken. Zie <a href="#praktisch">Praktisch</a>.</div>
-    <div class="note"><b>Optioneel en alternatieven</b>Extra 2–3 nachten na Tokio: de Yamagata-lus met de sneeuwmonsters van Zao en Ginzan Onsen. Eén nacht in een tempel op Koyasan kan vanuit Osaka. Liever een havenstad dan een tweede onsenstop? Ruil Kurokawa voor Nagasaki.</div>
+    <div class="note"><b>Korter, ca. 3 weken (21 nachten)</b>Tokio 4, Oku-Nikko 2, Yudanaka 2, Kanazawa 1, Gokayama 1, Kyoto 3, Osaka 1, nachtboot 1, Beppu 2, Nagasaki 1, Fukuoka 3. Dan sla je Kagoshima en de dagtrip naar Hiroshima over.</div>
+    <div class="note"><b>Eerst boeken</b>Je reist flexibel en boekt de meeste hotels (ca. €50–100 per nacht) een paar dagen vooraf. Uitzonderingen, een paar weken vooraf: de ryokans in Yumoto (Oku-Nikko) en Yudanaka, de minshuku in Gokayama (weekenden raken het eerst vol), de bus voor de dagtrip naar Kurokawa, Gunkanjima en de vlucht van Fukuoka naar Hongkong. De nachtboot kun je tot op de dag zelf boeken. Zie <a href="#praktisch">Praktisch</a>.</div>
+    <div class="note"><b>Optioneel en alternatieven</b>Extra 2–3 nachten na Tokio: de Yamagata-lus met de sneeuwmonsters van Zao en Ginzan Onsen. Eén nacht in een tempel op Koyasan kan vanuit Osaka. Wil je toch een nacht in een mooie ryokan als uitspatting? Kies er een met eigen buitenbad in Yumoto of Beppu; dan speelt je tattoo ook geen rol.</div>
     <h2>Hoe je de must-sees doet zonder drukte</h2>
     <p>Ga naar de grote tempels bij zonsopgang of vlak voor sluitingstijd en eet waar mensen uit de buurt eten. Januari helpt: het is het rustigste moment van het jaar.</p>
     <div class="tablewrap"><table>
@@ -1076,9 +1076,10 @@ function viewPrakt(){
    ["Kyoto → Nara, Kyoto → Osaka","JR / Kintetsu / Hankyu","Gewoon met je Suica.",null],
    ["Osaka → Hiroshima (dagtrip)","JR West (Sanyo-Shinkansen)","Ca. 1 uur 20, ca. ¥10.290 per rit; daarna JR-veerboot naar Miyajima.",["https://smart-ex.jp/en/","SmartEX"]],
    ["Osaka → Beppu","Sunflower-nachtboot","Online boeken tot 14:00 op de dag van vertrek; soms volgt een bevestigingstelefoontje in het Japans.",["https://www.ferry-sunflower.co.jp/language/english/","Ferry Sunflower"]],
-   ["Beppu → Yufuin → Kurokawa","Kyushu Odan-bus","Niet in een JR-pas. Reserveer; ca. 3 bussen per dag.",["https://watabi.org/en/articles/kurokawa-onsen-guide","Watabi"]],
-   ["Kurokawa → Aso → Kumamoto → Kagoshima","Bus + JR Kyushu","Bus naar Aso, Hohi-lijn naar Kumamoto en de Kyushu-Shinkansen naar Kagoshima-Chuo.",["https://smart-ex.jp/en/","SmartEX"]],
-   ["Kagoshima → Hakata","JR Kyushu (Kyushu-Shinkansen)","Ca. 1,5 uur via SmartEX of het station.",["https://smart-ex.jp/en/","SmartEX"]],
+   ["Beppu ⇄ Kurokawa (dagtrip)","Kyushu Odan-bus","Heen 8:10, terug 15:00 (2026). Niet in een JR-pas; reserveer.",["https://www.kosokubus.com/_en/bus_list/00044-00871/00044/","Kosokubus"]],
+   ["Beppu → Kokura → Kagoshima-Chuo","JR Kyushu (Sonic + Shinkansen)","Ca. 3,5 uur.",["https://www.jrkyushu.co.jp/english/","JR Kyushu"]],
+   ["Kagoshima → Shin-Tosu → Takeo-Onsen → Nagasaki","JR Kyushu (Shinkansen + Relay Kamome + Kamome)","Ca. 2,5–3 uur, één kaartje.",["https://www.jrkyushu.co.jp/english/","JR Kyushu"]],
+   ["Nagasaki → Hakata","JR Kyushu (Kamome + Relay Kamome)","Ca. 1 uur 20. Alle drie de treinritten op Kyushu vallen binnen 5 dagen: een All Kyushu Pass (5 dagen, ¥24.000) kan voordelig zijn.",["https://www.pelago.com/en/articles/jr-kyushu-pass-guide/","Uitleg JR Kyushu Pass"]],
    ["Fukuoka → Hongkong","Cathay Pacific, HK Express, Hong Kong Airlines, Greater Bay Airlines","Directe vlucht, ca. 3–4 uur. Het vliegveld ligt op 5 minuten met de metro van Hakata.",["https://www.hkexpress.com/Explore/Destinations/Fukuoka","HK Express"]]
   ];
   return `<div class="view">
@@ -1089,7 +1090,7 @@ function viewPrakt(){
     <ul class="plain">
       <li><b>Visit Japan Web:</b> vul je inreis- en douanegegevens vooraf in en je krijgt QR-codes voor de luchthaven. Niet verplicht, wel sneller; een papieren kaart in het vliegtuig mag ook. ${ext("https://vjw.digital.go.jp/","Visit Japan Web")}</li>
       <li><b>JESTA:</b> de nieuwe reisvergunning komt pas rond 2028. Voor jullie reis is die niet nodig; betaal niets aan sites die beweren dat het wel moet. ${ext("https://selfguidejapan.com/blog/japan-jesta-2026","Uitleg")}</li>
-      <li><b>Op tijd boeken:</b> de meeste hotels boek je 1–3 dagen vooraf, doordeweeks is makkelijker dan in het weekend. Een paar weken vooraf: de ryokans in Yumoto, Yudanaka en Kurokawa, de minshuku in Gokayama, de Kyushu Odan-bus en de vlucht naar Hongkong.</li>
+      <li><b>Op tijd boeken:</b> de meeste hotels boek je 1–3 dagen vooraf, doordeweeks is makkelijker dan in het weekend. Een paar weken vooraf: de ryokans in Yumoto en Yudanaka, de minshuku in Gokayama, de bus naar Kurokawa, Gunkanjima en de vlucht naar Hongkong.</li>
       <li><b>Internet:</b> een eSIM voor Japan installeer je thuis en zet je aan bij landing.</li>
       <li><b>Verzekering:</b> check of je reisverzekering wintersport of sneeuwschoenwandelen dekt.</li>
     </ul>
@@ -1103,7 +1104,7 @@ function viewPrakt(){
     </ul>
 
     <h2 class="sec" id="p-tickets">Kaartjes per traject</h2>
-    <p>Sla de landelijke JR Pass over: vanaf oktober 2026 kost de 7-dagenpas ¥53.000 als je hem in het buitenland koopt, en je vaart tussen Osaka en Kyushu en reist veel met de bus. Koop losse Shinkansen-kaartjes en check per week een regionale pas, zoals de NIKKO PASS en voor Kyushu een JR Kyushu-pas (reken na: de Northern-pas dekt Kagoshima niet). ${ext("https://www.triptojapan.com/blog/is-japan-rail-pass-worth-it","TripToJapan")}</p>
+    <p>Sla de landelijke JR Pass over: vanaf oktober 2026 kost de 7-dagenpas ¥53.000 als je hem in het buitenland koopt, en je vaart tussen Osaka en Kyushu en reist veel met de bus. Koop losse Shinkansen-kaartjes en check per week een regionale pas, zoals de NIKKO PASS en voor Kyushu de All Kyushu Pass voor 5 dagen (¥24.000), die je drie treinritten op dag 23–27 dekt; reken na. ${ext("https://www.triptojapan.com/blog/is-japan-rail-pass-worth-it","TripToJapan")}</p>
     <div class="tablewrap"><table>
       <thead><tr><th>Traject</th><th>Vervoerder</th><th>Hoe en waar</th><th>Link</th></tr></thead>
       <tbody>${legs.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]?ext(r[3][0],r[3][1]):"Op het station"}</td></tr>`).join("")}</tbody>
@@ -1122,7 +1123,10 @@ function viewPrakt(){
     <ul class="plain">
       <li>Was je eerst helemaal op het krukje bij de douche, en ga dan pas het bad in.</li>
       <li>Je baadt naakt, gescheiden voor mannen en vrouwen. Het kleine handdoekje gaat niet in het water; leg het op je hoofd.</li>
-      <li>Tatoeages worden niet overal toegelaten. Een privébad (kashikiri) is dan de oplossing; in Kurokawa kan dat bij veel ryokans.</li>
+      <li><b>Tattoos:</b> ongeveer de helft van de onsen weert ze nog, of laat je alleen toe als je ze afplakt. Bij elke onsentip op deze site staat wat we over de regels weten.</li>
+      <li><b>Afplakken:</b> kleine tattoos mag je vaak bedekken met huidkleurige stickers ("tattoo kakushi seal"). Koop die vooraf, bijvoorbeeld bij Don Quijote. Voor sleeves of grote stukken werkt het meestal niet.</li>
+      <li><b>Privébad (kashikiri):</b> bij veel ryokans huur je een bad per half uur of uur, soms gratis. Vraag bij het boeken: "Kashikiri-buro wa arimasu ka?"</li>
+      <li><b>Waar het meestal wel kan:</b> buurtbadhuizen (sento) en Beppu. Waar het vaak niet kan: grote onsencomplexen en hotelketens. Zoeken kan op ${ext("https://tattoofriendly.jp/","TattooFriendly.jp")}.</li>
       <li>Drink water tussen de baden door en blijf niet te lang in heel heet water.</li>
     </ul>
 
@@ -1552,7 +1556,7 @@ Object.assign(EAT,{
   );
   const bp = by("beppu");
   bp.note = "De boot komt vroeg aan. Laat je tassen achter bij je hotel of in een kluisje op het station en begin met een ontbijt en een bad.";
-  const kr = by("kurokawa");
+  const kr = by("kurokawa") || {};
   kr.intro = "De uitspatting van de reis: twee nachten in een ryokan in een van de mooiste onsendorpjes van Japan, in een bebost dal op ca. 700 meter. Met een houten pas kies je drie buitenbaden, en 's avonds staat het dorp vol bamboelantaarns. De caldera van Aso ligt vlakbij.";
   kr.note = "Hier geef je het meeste uit, want het zijn bijna allemaal ryokans met diner en ontbijt. Kies een kamer met eigen buitenbad of huur een privébad. De Kyushu Odan-bus moet je reserveren.";
   const kg = by("kagoshima");
@@ -1629,6 +1633,151 @@ Object.assign(TIX,{
   ["Nachtboot naar Beppu","Sunflower, vertrek ca. 19:05 en aankomst ca. 6:55 (zondag t/m donderdag; check andere dagen). Online boeken kan tot 14:00 op de dag van vertrek. Soms volgt er een bevestigingstelefoontje in het Japans.",["https://www.ferry-sunflower.co.jp/language/english/","Ferry Sunflower"]],
   ["Naar de boot","Metro naar Cosmosquare en de New Tram naar Trade Center-mae, dan 5 minuten lopen naar de Sunflower-terminal."]
  ]
+});
+
+/* ---------- Maps-links nagelopen: vage zoekopdrachten vervangen door specifieke plekken ---------- */
+(function(){
+  // [tiptitel, nieuwe Maps-zoekopdracht (""=geen link), zin om aan de tekst toe te voegen]
+  const FIX = [
+   ["Karaoke in een privékamertje","Karaoke Kan Shibuya","Bijvoorbeeld bij Karaoke-kan in Shibuya."],
+   ["Don Quijote","MEGA Don Quijote Shibuya Honten","De grootste is MEGA Don Quijote in Shibuya."],
+   ["Gachapon","Akihabara Gachapon Kaikan","Begin bij de Gachapon Kaikan in Akihabara."],
+   ["Yakitori onder het spoor in Yurakucho","Yurakucho Concourse","Zoek de retro gang Yurakucho Concourse onder het spoor."],
+   ["Depachika","Isetan Shinjuku","De link gaat naar Isetan in Shinjuku."],
+   ["Sento: het buurtbadhuis","Mikokuyu Sumida Tokyo","Met tattoos: Mikoku-yu bij Honjo-Azumabashi (vlak bij Asakusa) staat op de lijst van tattoovriendelijke sento van Time Out."],
+   ["Yuba","Yuba Cafe Hazuki Nikko","Makkelijk te proberen bij Yuba Cafe Hazuki."],
+   ["Bakkerij van het Kanaya Hotel","Nikko Kanaya Hotel",""],
+   ["Soba en oyaki","Zenkoji Nakamise-dori","De straat Nakamise-dori naar Zenko-ji zit vol soba- en oyakizaakjes."],
+   ["Kanazawa-oden","Akadama Honten Kanazawa","De klassieker is Akadama in Katamachi."],
+   ["Uitkijkpunt boven het dorp","相倉合掌造り集落 展望台",""],
+   ["Avond aan de irori","",""],
+   ["Gokayama-tofu","",""],
+   ["Yudofu","Nanzenji Junsei","Bijvoorbeeld bij Junsei, vlak bij Nanzen-ji."],
+   ["Kaiseki-lunch","",""],
+   ["Higashiyama-steegjes","Sannenzaka Kyoto",""],
+   ["Kushikatsu in Shinsekai","Kushikatsu Daruma Shinsekai Honten","De bekendste is Daruma; de hoofdvestiging zit in Shinsekai."],
+   ["Toriten","Toyoken Beppu","Toyoken claimt het gerecht te hebben uitgevonden."],
+   ["Beppu-reimen","Kogetsu Beppu reimen","Probeer het bij Kogetsu."],
+   ["Nakamura Coffee","なかむら珈琲店 別府",""],
+   ["Nyuto tegata: de houten badpas","Kurokawa Onsen Kaze no Ya",""],
+   ["Onsen-sento","","Vraag bij je guesthouse naar het dichtstbijzijnde buurtbadhuis."],
+   ["Kurobuta en Kagoshima-ramen","Kurobuta Ryori Ajimori Kagoshima","Voor kurobuta: Ajimori in Tenmonkan; voor ramen: Tontoro."],
+   ["Hakata-ramen","Hakata Issou","Een van de bekendste: Hakata Issou, bij station Hakata."]
+  ];
+  const DROP = ["Western Are","Cafe & Gallery Nin-emon"];
+  STOPS.forEach(s=>{
+    s.tips = s.tips.filter(t=>!DROP.includes(t.t));
+    s.tips.forEach(t=>{ const f=FIX.find(x=>x[0]===t.t); if(!f) return; t.m=f[1]; if(f[2]) t.d=t.d.replace(/\s*$/,"")+" "+f[2]; });
+  });
+  const EATFIX = {
+   "Oyaki bij Zenko-ji":"Zenkoji Nakamise-dori",
+   "Soba in Nagano":"Zenkoji Nakamise-dori",
+   "Kaisendon op de Omicho-markt":"Omicho Market",
+   "Akaushi-don in Aso":"Imakin Shokudo Aso",
+   "Kurobuta-shabu-shabu":"Kurobuta Ryori Ajimori Kagoshima",
+   "Satsuma-age":""
+  };
+  Object.keys(EAT).forEach(id=>{
+    const e=EAT[id];
+    e.places = e.places.filter(p=>p.n!=="Ikkyu no Namida");
+    e.places.forEach(p=>{
+      if(p.n in EATFIX) p.m=EATFIX[p.n];
+      if(p.n==="Akaushi-don in Aso") p.w=p.w.replace(/\s*$/,"")+" Bekend adres: Imakin Shokudo.";
+      if(p.n==="Kurobuta-shabu-shabu") p.w=p.w.replace(/\s*$/,"")+" Bijvoorbeeld bij Ajimori.";
+      if(p.n==="Yatai in Nakasu en Tenjin"){ p.n="Yatai in Tenjin en Nagahama"; p.m="Tenjin yatai"; }
+    });
+  });
+  const kr = STOPS.find(s=>s.id==="kurokawa") || {stay:[]};
+  kr.stay.unshift({n:"Ryokan Ichinoi",a:"Kurokawa Onsen",d:"Volgens de eigen site gelden hier geen beperkingen voor tattoos. Check bij het boeken.",tw:"check",m:"Ichinoi Kurokawa Onsen"});
+  kr.stay.forEach(st=>{ if(st.n==="Ryokan in Kurokawa") st.m="Kurokawa Onsen"; });
+})();
+
+/* ---------- Kyushu: Nagasaki in plaats van Kurokawa (Kurokawa als dagtrip vanuit Beppu) + tattoo-info per onsen ---------- */
+(function(){
+  const by = id => STOPS.find(s=>s.id===id);
+  const bp = by("beppu");
+  bp.intro = "Je stapt van de boot in een stad die stoomt: in Kannawa komt de damp uit de straatputten. Beppu heeft acht onsenwijken, en het is een van de meest tattoovriendelijke onsensteden van Japan. Op je tweede dag maak je een dagtrip naar het onsendorpje Kurokawa in de bergen.";
+  bp.note = "De boot komt vroeg aan. Laat je tassen achter bij je hotel of in een kluisje op het station en begin met een ontbijt en een bad. Reserveer de bus naar Kurokawa een paar dagen vooraf.";
+  bp.tips.unshift(
+   {c:"chillen",t:"Dagtrip Kurokawa Onsen",d:"Met de Kyushu Odan-bus om 8:10 vanaf station Beppu, aankomst 10:45; terug om 15:00, rond 17:30 weer in Beppu (dienstregeling 2026). Zo heb je ruim 4 uur in een van de mooiste onsendorpjes van Japan, in een bebost dal. Reserveer de bus vooraf; niet in een JR-pas. Tattoos: regels verschillen per ryokan. Vraag bij het informatiecentrum Kaze no Ya welke buitenbaden tattoos toelaten.",m:"Kurokawa Onsen Kaze no Ya",l:"https://www.kosokubus.com/_en/bus_list/00044-00871/00044/",lt:"Bus reserveren"},
+   {c:"chillen",t:"Kurokawa: de houten badpas",d:"Met de nyuto tegata (¥1.500, te koop bij Kaze no Ya) kies je 3 van de ca. 25 buitenbaden van de ryokans, tussen 8:30 en 21:00. Ryokan Ichinoi laat volgens de eigen site tattoos toe.",m:"Ichinoi Kurokawa Onsen",l:"https://watabi.org/en/articles/kurokawa-onsen-guide",lt:"Watabi: Kurokawa-gids"},
+   {c:"eten",t:"Kurokawa: Patisserie Roku",d:"Gebak en koffie in het dorp, tussen twee baden door.",m:"Patisserie Roku Kurokawa"}
+  );
+  const kg = by("kagoshima");
+  kg.get = {text:"Van Beppu met de Limited Express Sonic naar Kokura (ca. 1 uur 15) en daar de Shinkansen naar Kagoshima-Chuo (ca. 2 uur).",from:"Beppu Station",to:"Kagoshima-Chuo Station"};
+  const ng = by("nagasaki");
+  ng.get = {text:"Van Kagoshima-Chuo met de Kyushu-Shinkansen naar Shin-Tosu, de Relay Kamome naar Takeo-Onsen en de Kamome naar Nagasaki. Samen ca. 2,5–3 uur.",from:"Kagoshima-Chuo Station",to:"Nagasaki Station"};
+  const fk = by("fukuoka");
+  fk.get = {text:"Van Nagasaki met de Kamome naar Takeo-Onsen en daar, op hetzelfde perron, de Relay Kamome naar Hakata. Samen ca. 1 uur 20.",from:"Nagasaki Station",to:"Hakata Station"};
+
+  // tattoo-info per onsentip
+  const TAT = {
+   "Hakone: Tenzan Tohji-kyo":"Tattoos: volgens bezoekers toegestaan. Er hangt wel een bordje dat getatoeëerde gasten niet in groepen mogen komen.",
+   "Zwavelbad in Yumoto":"Tattoos: verschilt per ryokan. Vraag bij het boeken naar een privébad (kashikiri) of een kamer met eigen bad.",
+   "De negen baden van Shibu":"Tattoos: geen vaste regel gevonden. Vraag het bij je ryokan; veel ryokans hebben ook een bad dat je privé kunt gebruiken.",
+   "Funaoka Onsen":"Tattoos: het is een sento, en die laten tattoos meestal toe. Let op een bordje bij de ingang.",
+   "Sauna no Umeyu":"Tattoos: het is een sento, en die laten tattoos meestal toe. Let op een bordje bij de ingang.",
+   "Kurama Onsen":"Tattoos: geen regel gevonden. Vraag het bij de ingang.",
+   "Tenzan-no-yu":"Tattoos: grote onsencomplexen weren tattoos vaak. Check vooraf.",
+   "Onsen aan boord":"Tattoos: geen regel gevonden. Vraag het bij de balie aan boord.",
+   "Hyotan Onsen":"Tattoos: welkom.",
+   "Takegawara Onsen":"Tattoos: toegestaan. Het zandbad reserveer je ter plekke op de dag zelf.",
+   "Kannawa Steam Bath":"Tattoos: geen regel gevonden. Beppu is over het algemeen tattoovriendelijk, maar vraag het bij de ingang.",
+   "Myoban Yunosato":"Tattoos: geen regel gevonden. Beppu is over het algemeen tattoovriendelijk, maar vraag het bij de ingang.",
+   "Modderbad in Hoyoland":"Tattoos: geen regel gevonden. Vraag het bij de ingang.",
+   "Zandbad aan het strand":"Tattoos: meestal geen probleem; je ligt in een yukata in het zand.",
+   "Zandbad in Ibusuki":"Tattoos: in het zand lig je in een yukata. Voor het bad erna kan een andere regel gelden, dus vraag het.",
+   "Onsen-sento":"Tattoos: sento laten tattoos meestal toe. Let op een bordje bij de ingang.",
+   "Fukunoyu":"Tattoos: grote onsencomplexen weren tattoos vaak. Check vooraf."
+  };
+  STOPS.forEach(s=>s.tips.forEach(t=>{ if(TAT[t.t] && !/Tattoos:/.test(t.d)) t.d = t.d.replace(/\s*$/,"")+" "+TAT[t.t]; }));
+})();
+Object.assign(WHY,{
+ beppu:"De onsenhoofdstad van Japan, en een van de meest tattoovriendelijke: baden in water, zand, stoom en modder, lunch koken boven een stoombron, en een dagtrip naar de buitenbaden van Kurokawa in de bergen.",
+ nagasaki:"Een havenstad op heuvels waar Japan eeuwenlang via de Nederlanders naar buiten keek: Dejima, Chinese tempels, trammetjes en een van de mooiste nachtuitzichten van Japan. Plus Gunkanjima, het verlaten mijneiland: industriëler wordt het niet."
+});
+Object.assign(GLANCE,{
+ beppu:[["chillen","Zand-, stoom- en modderbaden"],["natuur","Kokende 'Hells' van Kannawa"],["chillen","Dagtrip Kurokawa Onsen"],["eten","Lunch koken boven een stoombron"]],
+ nagasaki:[["cultuur","Dejima, de Nederlandse handelspost"],["cultuur","Verlaten mijneiland Gunkanjima"],["natuur","Nachtuitzicht vanaf Inasayama"],["eten","Champon en Chinatown"]]
+});
+Object.assign(LEGS,{
+ beppu:"Sonic + Shinkansen · ca. 3,5 uur",
+ kagoshima:"Shinkansen + 2 treinen · ca. 2,5–3 uur",
+ nagasaki:"Kamome + Relay Kamome · ca. 1 uur 20"
+});
+Object.assign(SCN,{
+ nagasaki:{front:(r)=>{let g=`<path d="M0,214 L0,150 Q80,120 160,140 Q240,100 330,130 Q420,96 500,128 Q560,118 600,136 L600,214 Z" style="fill:var(--mtn)"/>`;for(let i=0;i<70;i++){const x=r()*600,y=140+r()*56;g+=`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1+r()*1.4).toFixed(1)}" style="fill:var(--warm)" opacity="${(0.5+r()*0.5).toFixed(2)}"/>`;}return g+`<rect x="0" y="198" width="600" height="16" style="fill:${mix("var(--cold)",45,"var(--mtn)")}"/>`;}}
+});
+Object.assign(TIX,{
+ beppu:[
+  ["Haven → centrum","De bus van de Sunflower-terminal naar Beppu Station duurt ca. 15 minuten."],
+  ["In de stad","Stadsbussen naar Kannawa en Myoban. Vraag bij het station naar een dagpas voor de bus."],
+  ["Dagtrip Kurokawa","Kyushu Odan-bus: heen 8:10 vanaf Beppu Station (aankomst 10:45), terug 15:00 vanaf Kurokawa (aankomst ca. 17:30). Reserveer online; niet in een JR-pas.",["https://www.kosokubus.com/_en/bus_list/00044-00871/00044/","Kosokubus"]],
+  ["Volgende stop regelen","Reserveer de Sonic naar Kokura en de Shinkansen naar Kagoshima bij JR Kyushu, of koop hier een JR Kyushu-pas (zie Kagoshima).",["https://www.jrkyushu.co.jp/english/","JR Kyushu"]]
+ ],
+ kagoshima:[
+  ["Beppu → Kokura → Kagoshima-Chuo","Limited Express Sonic naar Kokura (ca. 1 uur 15), dan de Shinkansen naar Kagoshima-Chuo (ca. 2 uur).",["https://www.jrkyushu.co.jp/english/","JR Kyushu"]],
+  ["Spaartip","Een All Kyushu Pass voor 5 dagen (¥24.000, prijs maart 2026) dekt alle drie de treinritten op Kyushu als ze binnen 5 dagen vallen: Beppu → Kagoshima (dag 23), Kagoshima → Nagasaki (dag 25) en Nagasaki → Hakata (dag 27), plus dagtrips naar Ibusuki of Kirishima. Reken het na tegen losse kaartjes.",["https://www.pelago.com/en/articles/jr-kyushu-pass-guide/","Uitleg JR Kyushu Pass"]],
+  ["Sakurajima","De veerboot vaart dag en nacht, ca. 15 minuten. Je betaalt bij aankomst op het eiland."]
+ ],
+ nagasaki:[
+  ["Kagoshima → Shin-Tosu → Takeo-Onsen → Nagasaki","Kyushu-Shinkansen, Relay Kamome en Kamome, samen ca. 2,5–3 uur, op één kaartje. Gedekt door een All Kyushu Pass.",["https://www.jrkyushu.co.jp/english/","JR Kyushu"]],
+  ["In de stad","Het trammetje brengt je naar bijna alles. Naar Inasayama neem je de bus of tram naar de kabelbaan."],
+  ["Gunkanjima","Boek online bij een van de bootmaatschappijen; vergelijk vertrekpier en wat er gebeurt als aan land gaan niet doorgaat. Plus ¥650 stadsheffing.",["https://watabi.org/en/articles/gunkanjima-guide","Watabi: Gunkanjima-gids"]]
+ ],
+ fukuoka:[
+  ["Nagasaki → Hakata","Kamome + Relay Kamome, ca. 1 uur 20, op één kaartje.",["https://www.jrkyushu.co.jp/english/","JR Kyushu"]],
+  ["Dazaifu","Nishitetsu-trein vanaf Tenjin, ca. 30–40 minuten (overstappen in Futsukaichi), met je Suica."],
+  ["Kitakyushu","Shinkansen Hakata → Kokura (ca. 16 min) of goedkoper met de gewone trein (ca. 1 uur, Suica)."],
+  ["Vlucht naar Hongkong (dag 29)","Direct met Cathay Pacific, HK Express, Hong Kong Airlines of Greater Bay Airlines, ca. 3–4 uur. Het vliegveld ligt op 5 minuten met de metro vanaf Hakata.",["https://www.hkexpress.com/Explore/Destinations/Fukuoka","HK Express"]]
+ ]
+});
+Object.assign(EAT,{
+ nagasaki:{dishes:["Champon","Sara-udon","Castella","Toruko-rice","Kakuni-manju"],places:[
+   {n:"Shikairo",w:"De bakermat van champon, met uitzicht over de haven.",p:"€",tag:"local",m:"Shikairo Nagasaki"},
+   {n:"Tsuruchan",w:"Het oudste koffiehuis van Kyushu, voor Toruko-rice en een milkshake.",p:"€",tag:"local",m:"Tsuruchan Nagasaki"},
+   {n:"Chinatown Shinchi",w:"Kakuni-manju en sara-udon van de kraampjes.",p:"€",tag:"local",m:"Nagasaki Shinchi Chinatown"},
+   {n:"Fukusaya",w:"Castella sinds 1624; neem een doosje mee voor in de trein.",p:"€",tag:"local",m:"Fukusaya Nagasaki Honten"}]}
 });
 
 const app = document.getElementById("app");
